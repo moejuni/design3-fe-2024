@@ -6,8 +6,10 @@
     "dev": "vite --open --host",
     "build" : "vite build",
     "preview" : "vite preview --open --host",
-    "deploy" : "surge ./dist mijnewebsitehehe.surge.sh",
-    "postdeploy" : "start chrome https://mijnewebsitehehe.surge.sh"
+    "deploy-main" : "surge ./dist mijnewebsitehehe.surge.sh",
+    "postdeploy-main" : "start chrome https://mijnewebsitehehe.surge.sh",
+    "deploy-develop" : "surge ./dist mijnewebsitehehe.surge.sh",
+    "postdeploy-develop" : "start chrome https://mijnewebsitehehe.surge.sh"
   },
   "keywords": [],
   "author": "",
