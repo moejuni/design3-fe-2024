@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@100..900&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css");
 :root {
   --LightSlateBlue: hsl(252, 100%, 67%);
   --LightRoyalBlue: hsl(241, 81%, 54%);
@@ -11,6 +12,13 @@
   --OrangeyYellow: hsl(39, 100%, 56%);
   --GreenTeal: hsl(166, 100%, 37%);
   --CobaltBlue: hsl(234, 85%, 45%);
+}
+body {
+  overflow: hidden;
+  min-height: 100vh;
+}
+canvas {
+  pointer-events: none;
 }
 * {
   box-sizing: border-box;
@@ -45,7 +53,12 @@ main {
         background-color: var(--VioletBlue);
         flex-direction: column;
         justify-content: center;
-        /* display: inline-block; */
+        opacity: 0;
+        animation-fill-mode: forwards;
+        animation-name: bounceIn;
+        animation-duration: 500ms;
+        animation-delay: 500ms;
+
         h3 {
           font-size: 6rem;
           font-weight: 800;
@@ -64,6 +77,11 @@ main {
         width: 70%;
         margin: 1rem auto;
         line-height: 2.1rem;
+      }
+      h2,
+      p {
+        animation-name: fadeIndown;
+        animation-duration: 400ms;
       }
     }
     &:nth-child(2) {
@@ -107,6 +125,8 @@ main {
               transparent
             );
             color: var(--LightRed);
+            animation: bounceIn;
+            animation-duration: 500ms;
           }
           &:nth-child(2) {
             background-color: color-mix(
@@ -115,6 +135,9 @@ main {
               transparent
             );
             color: var(--OrangeyYellow);
+            animation: bounceIn;
+            animation-duration: 500ms;
+            animation-delay: 300ms;
           }
           &:nth-child(3) {
             background-color: color-mix(
@@ -123,6 +146,9 @@ main {
               transparent
             );
             color: var(--GreenTeal);
+            animation: bounceIn;
+            animation-duration: 500ms;
+            animation-delay: 600ms;
           }
           &:nth-child(4) {
             background-color: color-mix(
@@ -131,6 +157,9 @@ main {
               transparent
             );
             color: var(--VioletBlue);
+            animation: bounceIn;
+            animation-duration: 500ms;
+            animation-delay: 900ms;
           }
         }
       }
